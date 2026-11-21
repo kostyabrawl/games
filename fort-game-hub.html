@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d13">
+  <meta name="description" content="Play the games featured in FORT's Shorts. Get Enlisted or try War Thunder for free through FORT's game links.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FORT — Games from my Shorts">
+  <meta property="og:description" content="Seen the video? Now play the game. Choose Enlisted or War Thunder and jump in for free.">
+  <title>FORT — Games from my Shorts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#080c12;--surface:#111720;--text:#f3f5f1;--muted:#a5abb2;--line:rgba(255,255,255,.12);--lime:#d8fc5d;--blue:#66d6fb;--radius:22px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body:before{content:"";position:fixed;pointer-events:none;inset:0;z-index:0;background:radial-gradient(ellipse at 50% -18%,rgba(134,191,94,.11),transparent 48%),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.012) 1px,transparent 1px);background-size:auto,76px 76px,76px 76px}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid white;outline-offset:4px}
+    .wrap{position:relative;z-index:1;max-width:1240px;padding:0 32px;margin:0 auto}
+    .nav{height:91px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:13px}
+    .brand-logo{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(216,252,93,.55);background:var(--lime);color:#0a1113;transform:skew(-7deg);font:900 34px/1 "Barlow Condensed",Impact,sans-serif;box-shadow:0 0 28px rgba(216,252,93,.12)}
+    .brand-copy{display:flex;flex-direction:column;line-height:1.08}.brand-copy b{font:800 22px/1 "Barlow Condensed",Impact,sans-serif;letter-spacing:.09em}.brand-copy span{font-size:10px;letter-spacing:.21em;color:#8b969b;margin-top:5px;font-weight:700}
+    .nav-right{display:flex;align-items:center;gap:16px}
+    .nav-label{font-size:11px;letter-spacing:.13em;color:#aeb6b9;font-weight:700}.live-dot{width:7px;height:7px;background:var(--lime);border-radius:100%;display:inline-block;margin-right:9px;box-shadow:0 0 12px rgba(216,252,93,.8)}
+    .nav-link{display:inline-flex;gap:11px;align-items:center;border:1px solid #384345;border-radius:99px;padding:12px 17px;font-size:12px;font-weight:800;letter-spacing:.08em;transition:background .2s,border-color .2s}.nav-link:hover{background:#1d2a2c;border-color:#89ad65}
+    .hero{padding:72px 0 63px;position:relative}
+    .overline{display:inline-flex;align-items:center;gap:13px;color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+    .overline:before{content:"";width:26px;height:2px;background:var(--lime)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font:900 clamp(74px,10.4vw,150px)/.81 "Barlow Condensed",Impact,"Arial Narrow",sans-serif;letter-spacing:-.026em;text-transform:uppercase;margin:23px 0 20px;max-width:1000px}
+    h1 .thin{color:#aeb8b3}h1 .accent{color:var(--lime)}
+    .hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:34px}
+    .hero-sub{max-width:480px;color:#b7c0c1;font-size:16px;line-height:1.68;margin:0}
+    .hero-sub strong{color:white}
+    .hero-details{display:flex;align-items:center;gap:27px;color:#8f9a9b;font-size:11px;letter-spacing:.09em;font-weight:800;text-transform:uppercase;padding-bottom:4px;white-space:nowrap}
+    .hero-details span{display:flex;gap:8px;align-items:center}.hero-details svg{width:17px;height:17px;color:var(--lime)}
+    .heading-row{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin:0 0 18px}
+    .section-label{font-size:11px;text-transform:uppercase;letter-spacing:.19em;color:#97a2a2;font-weight:800;margin:0}
+    .section-label span{color:var(--lime);margin-right:10px}
+    .section-aside{color:#718080;font-size:12px}
+    .games{display:grid;grid-template-columns:1.16fr 1fr;gap:18px}
+    .game{min-width:0;position:relative;isolation:isolate;min-height:522px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.15);display:flex;flex-direction:column;justify-content:space-between;padding:27px 29px 29px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;background:#182521}
+    .game:hover{transform:translateY(-4px);border-color:rgba(216,252,93,.4);box-shadow:0 20px 55px rgba(0,0,0,.2)}
+    .game:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,rgba(8,12,16,.02) 0%,rgba(8,12,16,.05) 30%,rgba(8,12,16,.60) 61%,rgba(8,12,16,.96) 100%)}
+    .game.wt{background:#152e3d}.game.wt:before{background:linear-gradient(to bottom,rgba(8,12,16,.01) 0%,rgba(8,12,16,.12) 33%,rgba(8,12,16,.7) 65%,rgba(8,12,16,.97) 100%)}
+    .scene{position:absolute;inset:0;width:100%;height:100%;z-index:-2;object-fit:cover}
+    .game-top{display:flex;justify-content:space-between;align-items:start;gap:8px;z-index:1}
+    .game-index{font:800 14px/1 "Barlow Condensed",sans-serif;letter-spacing:.08em;color:rgba(255,255,255,.85)}
+    .game-pill{border:1px solid rgba(255,255,255,.25);color:#fff;font-size:10px;letter-spacing:.11em;font-weight:800;border-radius:99px;padding:9px 11px;text-transform:uppercase;backdrop-filter:blur(10px);background:rgba(6,12,16,.33)}
+    .game.featured .game-pill{background:rgba(211,250,92,.9);border-color:transparent;color:#14211d}
+    .game-content{z-index:1}
+    .game-kicker{display:flex;align-items:center;gap:9px;color:var(--lime);letter-spacing:.16em;font-size:10px;font-weight:800;text-transform:uppercase;margin-bottom:12px}.wt .game-kicker{color:var(--blue)}
+    .game-kicker:before{content:"";width:18px;height:2px;background:currentColor}
+    h2{font:900 clamp(65px,6.6vw,98px)/.84 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.016em;margin:0 0 17px;text-transform:uppercase;text-shadow:0 5px 28px rgba(0,0,0,.18)}
+    .wt h2{font-size:clamp(61px,5.8vw,83px)}
+    .game-desc{font-size:14px;color:#ced3d0;line-height:1.55;max-width:410px;margin-bottom:21px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px}
+    .tag{font-size:10px;text-transform:uppercase;letter-spacing:.07em;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.065);padding:8px 10px;border-radius:5px;font-weight:700;color:#d7dede}
+    .cta{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 19px 16px 21px;background:var(--lime);color:#101814;border-radius:9px;text-transform:uppercase;font:900 19px/1 "Barlow Condensed",Impact,sans-serif;letter-spacing:.07em;min-height:58px;transition:filter .2s,transform .2s}
+    .cta:hover{filter:brightness(1.1);transform:translateY(-2px)}
+    .wt .cta{background:#8bdef9;color:#0a2029}
+    .cta svg{width:23px;height:23px;stroke-width:2.5;flex-shrink:0}
+    .fineprint{font-size:11px;color:#8c9999;margin:11px 1px 0}
+    .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:18px}
+    .step{border:1px solid rgba(255,255,255,.10);border-radius:13px;padding:21px 23px;background:rgba(255,255,255,.028);display:flex;align-items:center;gap:15px}
+    .step-n{font:800 28px/1 "Barlow Condensed",Impact,sans-serif;color:#75827d}.step-title{font-size:12px;font-weight:800;letter-spacing:.04em}.step-detail{font-size:11px;color:#8c999a;margin-top:5px;line-height:1.4}
+    .footer{display:flex;gap:20px;align-items:center;justify-content:space-between;margin:32px 0 0;padding:28px 0 36px;border-top:1px solid var(--line)}
+    .footer b{font:900 19px "Barlow Condensed",Impact,sans-serif;letter-spacing:.1em;color:#c5d2c5}
+    .disclosure{color:#8c9a9b;max-width:690px;text-align:right;font-size:11px;line-height:1.65}
+    @media (min-width:1100px){.hero{padding-top:83px;padding-bottom:78px}.game{min-height:545px}}
+    @media(max-width:850px){.hero{padding:61px 0 49px}.hero-bottom{align-items:start;flex-direction:column;gap:22px}.games{grid-template-columns:1fr 1fr}.game{min-height:495px;padding:22px}.game h2{font-size:clamp(54px,7.7vw,74px)}.game-desc{font-size:13px}.step{padding:19px 15px;gap:11px}.nav{height:77px}}
+    @media(max-width:650px){.wrap{padding:0 19px}.nav{height:75px}.nav-label{display:none}.brand-logo{width:37px;height:37px;font-size:30px}.brand-copy b{font-size:20px}.nav-link{font-size:10px;padding:10px 13px}.hero{padding:61px 0 43px}.overline{font-size:10px;letter-spacing:.16em}h1{font-size:clamp(43px,12.9vw,84px);margin:19px 0 19px;line-height:.91}.hero-sub{font-size:14px;line-height:1.65}.hero-details{gap:16px;font-size:9px;white-space:normal;flex-wrap:wrap}.heading-row{margin-bottom:13px}.section-aside{display:none}.games{grid-template-columns:1fr;gap:15px}.game{min-height:504px;padding:22px}.game h2{font-size:clamp(65px,14vw,93px)}.game.wt h2{font-size:clamp(65px,13vw,85px)}.game-desc{font-size:14px}.step{padding:18px}.steps{grid-template-columns:1fr;gap:9px}.footer{align-items:start;flex-direction:column;gap:10px;margin-top:25px}.disclosure{text-align:left}.scene{height:100%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="FORT game hub home"><span class="brand-logo">F</span><span class="brand-copy"><b>FORT</b><span>THE GAME HUB</span></span></a>
+    <div class="nav-right"><span class="nav-label"><span class="live-dot"></span>FROM MY YOUTUBE SHORTS</span><a class="nav-link" href="#games">EXPLORE GAMES <span aria-hidden="true">↘</span></a></div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="overline">THE GAMES BEHIND THE VIDEOS</div>
+      <h1 id="hero-title">WATCHED IT.<br><span class="thin">NOW </span><span class="accent">PLAY IT.</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-sub">You saw the action in my Shorts. <strong>Now it's your turn.</strong> Pick a game below and jump in — both are free to start.</p>
+        <div class="hero-details"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="m10 9 5 3-5 3z"/></svg> 2 GAMES</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg> FREE TO START</span></div>
+      </div>
+    </section>
+    <section id="games" aria-label="Choose a game">
+      <div class="heading-row"><p class="section-label"><span>01 /</span> PICK YOUR GAME</p><span class="section-aside">TWO GAMES. YOUR NEXT ADVENTURE.</span></div>
+      <div class="games">
+        <article class="game featured" aria-labelledby="enlisted-title">
+          <svg class="scene" viewBox="0 0 620 650" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylized landscape with a tank silhouette in an atmospheric World War II scene">
+            <defs><linearGradient id="enSky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a5a88b"/><stop offset=".43" stop-color="#65766b"/><stop offset="1" stop-color="#172b28"/></linearGradient><linearGradient id="enFog" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c2c6a5" stop-opacity=".6"/><stop offset="1" stop-color="#192b25" stop-opacity="0"/></linearGradient><filter id="enBlur"><feGaussianBlur stdDeviation="16"/></filter></defs>
+            <rect width="620" height="650" fill="url(#enSky)"/>
+            <circle cx="437" cy="134" r="105" fill="#d5d2a5" opacity=".2" filter="url(#enBlur)"/>
+            <path d="M0 246 82 230 155 250 249 219 344 235 463 200 620 235V650H0Z" fill="#566c5f" opacity=".6"/>
+            <path d="M0 316 54 291l40 7 19-23 38 19 57-25 88 29 89-35 74 18 67-16 94 37V650H0Z" fill="#344d43"/>
+            <g fill="#283c35" opacity=".8"><path d="M17 269h53v100H17zm8-28h35v38H25zM94 299h48v70H94zm88-53h55v123h-55zm16-39h23v43h-23zM302 278h72v91h-72zm19-29h29v29h-29zM444 247h84v122h-84z"/><path d="M0 337h620v56H0z"/></g>
+            <rect y="263" width="620" height="186" fill="url(#enFog)"/>
+            <path d="M0 380q138-45 250-2t370-14v286H0Z" fill="#21372e"/>
+            <g fill="#0c1b18" opacity=".95" transform="translate(4 18)">
+              <ellipse cx="320" cy="420" rx="206" ry="19" opacity=".4"/>
+              <path d="m133 358 23-21h294l28 20-27 37H149z"/>
+              <rect x="151" y="378" width="306" height="43" rx="21"/><path d="M169 372h270v49H169z"/>
+              <g fill="#53665b"><circle cx="184" cy="400" r="13"/><circle cx="226" cy="400" r="13"/><circle cx="268" cy="400" r="13"/><circle cx="310" cy="400" r="13"/><circle cx="352" cy="400" r="13"/><circle cx="394" cy="400" r="13"/><circle cx="436" cy="400" r="13"/></g>
+              <path d="m213 342 30-36h117l37 36z"/><path d="M309 302h128v11H309z"/><path d="m241 325-26-8-31 26h74z"/>
+            </g>
+            <path d="M0 405q172-26 310 14t310-4v235H0Z" fill="#172923" opacity=".9"/>
+            <g fill="#8d9874" opacity=".32"><circle cx="100" cy="271" r="3"/><circle cx="515" cy="214" r="2"/><circle cx="261" cy="168" r="2"/></g>
+          </svg>
+          <div class="game-top"><span class="game-index">GAME / 01</span><span class="game-pill">★ FEATURED PICK</span></div>
+          <div class="game-content">
+            <div class="game-kicker">SQUAD-BASED WWII ACTION</div>
+            <h2 id="enlisted-title">ENLISTED</h2>
+            <p class="game-desc">Lead your squad through massive World War II battles. Infantry, tanks, aircraft — all in one game.</p>
+            <div class="tags"><span class="tag">FREE TO PLAY</span><span class="tag">WWII</span><span class="tag">MULTIPLAYER</span></div>
+            <a class="cta" href="https://price-low.eu/a/R6V7vUgZyotO6Qo" target="_blank" rel="noopener noreferrer sponsored" aria-label="Open Enlisted game page using FORT's referral link">PLAY ENLISTED — FREE <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="fineprint">Opens the game page via my referral link ↗</p>
+          </div>
+        </article>
+        <article class="game wt" aria-labelledby="wt-title">
+          <svg class="scene" viewBox="0 0 540 650" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylized fighter aircraft over mountains and clouds">
+            <defs><linearGradient id="wtSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#254e63"/><stop offset=".5" stop-color="#5e7e8d"/><stop offset="1" stop-color="#142f43"/></linearGradient><linearGradient id="wtGl" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f3c498" stop-opacity=".55"/><stop offset="1" stop-color="#e5c59e" stop-opacity="0"/></linearGradient><filter id="wtBlur"><feGaussianBlur stdDeviation="23"/></filter></defs>
+            <rect width="540" height="650" fill="url(#wtSky)"/>
+            <ellipse cx="369" cy="234" rx="176" ry="80" fill="#f5c99e" opacity=".28" filter="url(#wtBlur)"/>
+            <path d="M0 266q71-25 139-13t104 5 162-27 135 14v84H0Z" fill="#c5d5d7" opacity=".25"/>
+            <path d="M0 338 77 266l53 49 74-109 93 126 52-48 67 60 60-45 64 44V650H0Z" fill="#385d67"/><path d="m121 299 83-93 61 83-47-22-23 23-26-27zM318 316l31-32 46 42-30-14-19 10z" fill="#c0d6d2" opacity=".35"/>
+            <path d="M0 389 118 318l89 41 91-37 84 47 90-28 68 35V650H0Z" fill="#1b3c49"/>
+            <g transform="translate(277 208) rotate(-16) scale(1.15)" fill="#102833"><path d="M0-125 19-77 24-18 166 31 168 48 20 30 25 90 64 116 64 128 4 105-4 105-64 128-64 116-25 90-20 30-168 48-166 31-24-18-19-77Z"/><path d="M-13-45h26l3 41h-32z" fill="#2d5665"/><path d="M-10-28h20l3 31h-26z" fill="#7499a2"/></g>
+            <path d="M0 423q180-37 301 4t239-4v227H0Z" fill="#0e2632" opacity=".48"/>
+          </svg>
+          <div class="game-top"><span class="game-index">GAME / 02</span><span class="game-pill">NEW PLAYERS</span></div>
+          <div class="game-content">
+            <div class="game-kicker">TANKS • PLANES • SHIPS</div>
+            <h2 id="wt-title">WAR<br>THUNDER</h2>
+            <p class="game-desc">Love my War Thunder Shorts but haven't tried the game? This one's for you. Take control of legendary military vehicles.</p>
+            <div class="tags"><span class="tag">FREE TO PLAY</span><span class="tag">VEHICLE COMBAT</span><span class="tag">MULTIPLAYER</span></div>
+            <a class="cta" href="https://price-low.eu/a/68AjpiGwZZu5VMD" target="_blank" rel="noopener noreferrer sponsored" aria-label="Open War Thunder game page using FORT's referral link">TRY WAR THUNDER — FREE <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="fineprint">For viewers who are new to War Thunder ↗</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="steps" aria-label="How to get started">
+      <div class="step"><span class="step-n">01</span><div><div class="step-title">CHOOSE A GAME</div><div class="step-detail">Pick the one you want to try.</div></div></div>
+      <div class="step"><span class="step-n">02</span><div><div class="step-title">OPEN THE LINK</div><div class="step-detail">Go to the game's sign-up page.</div></div></div>
+      <div class="step"><span class="step-n">03</span><div><div class="step-title">START PLAYING</div><div class="step-detail">Follow the game's installation steps.</div></div></div>
+    </section>
+  </main>
+  <footer class="footer"><b>FORT // GAME HUB</b><div class="disclosure">Disclosure: These are referral links and may support my channel. Both games are free to start; optional purchases may be available. Independent creator page, not an official game website.</div></footer>
+</div>
+</body>
+</html>
